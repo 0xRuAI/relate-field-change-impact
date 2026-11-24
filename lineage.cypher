@@ -1,0 +1,2 @@
+CREATE (f:Asset {id:'trades.fee',kind:'field'}), (m:Asset {id:'daily_pnl',kind:'model'}), (r:Asset {id:'weekly_summary',kind:'report'}), (t:Asset {id:'fee_alert',kind:'task'}), (u:Asset {id:'market_coverage',kind:'report'}), (f)-[:FEEDS]->(m), (m)-[:FEEDS]->(r), (f)-[:FEEDS]->(t);
+MATCH p=(a:Asset {id:'trades.fee'})-[:FEEDS*1..8]->(b:Asset) RETURN b.id AS asset, b.kind AS kind, length(p) AS hops ORDER BY hops, asset;

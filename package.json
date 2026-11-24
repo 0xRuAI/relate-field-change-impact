@@ -1,0 +1,1 @@
+{"name":"dot-relate-contest-local","version":"0.0.1","private":true,"dependencies":{"@relate/relate":"1.2.0"},"scripts":{"test":"node impact.cjs --test && node graph-cases.cjs","demo":"node impact.cjs","demo:paths":"node graph-cases.cjs"}}
